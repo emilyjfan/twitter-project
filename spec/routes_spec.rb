@@ -23,7 +23,7 @@ RSpec.describe 'Routes' do
 
     it 'responses with JSON' do
       get '/'
-      expect(JSON.parse(last_response.body)['body']).to eq('success')
+      expect(JSON.parse(last_response.body)).to be_an_instance_of Hash
     end
   end
 
